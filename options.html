@@ -1,0 +1,52 @@
+<!doctype html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title data-i18n="optionsTitle">Stars Manager 设置</title>
+    <link rel="stylesheet" href="options.css" />
+  </head>
+  <body>
+    <div class="container">
+      <h1 data-i18n="optionsTitle">Stars Manager 设置</h1>
+      <p data-i18n-html="optionsIntro">GitHub PAT 用于读取星标列表（勾选 <strong>read:user</strong>，私有星标需 <strong>repo</strong>）；分组、标签与备注通过坚果云 WebDAV 多端同步。</p>
+      <div class="field">
+        <label for="pat" data-i18n="fieldPat">GitHub PAT</label>
+        <input id="pat" type="password" placeholder="ghp_***" data-i18n-placeholder="placeholderPat" />
+      </div>
+      <div class="field field-checkbox">
+        <label for="syncLists">
+          <input id="syncLists" type="checkbox" checked />
+          <span data-i18n="fieldSyncLists">同步 GitHub Lists 为分组</span>
+        </label>
+        <p class="hint" data-i18n="hintSyncLists">需要 PAT 勾选 user 权限；每个 List 会显示为一种颜色的分组。</p>
+      </div>
+      <div class="field">
+        <label for="webdavUrl" data-i18n="fieldWebdavUrl">WebDAV 地址</label>
+        <input id="webdavUrl" type="text" placeholder="https://dav.jianguoyun.com/dav/" data-i18n-placeholder="placeholderWebdavUrl" />
+      </div>
+      <div class="field">
+        <label for="webdavUser" data-i18n="fieldWebdavUser">坚果云账号</label>
+        <input id="webdavUser" type="text" placeholder="you@example.com" data-i18n-placeholder="placeholderWebdavUser" />
+      </div>
+      <div class="field">
+        <label for="webdavPassword" data-i18n="fieldWebdavPassword">应用密码</label>
+        <input id="webdavPassword" type="password" placeholder="第三方应用密码，非登录密码" data-i18n-placeholder="placeholderWebdavPassword" />
+      </div>
+      <div class="field">
+        <label for="remotePath" data-i18n="fieldRemotePath">同步文件路径</label>
+        <input id="remotePath" type="text" placeholder="github-stars/stars-metadata.json" data-i18n-placeholder="placeholderRemotePath" />
+      </div>
+      <div class="actions">
+        <button id="save" type="button" data-i18n="btnSave">保存</button>
+        <button id="test" type="button" data-i18n="btnTestToken">测试 Token</button>
+        <button id="testWebdav" type="button" data-i18n="btnTestWebdav">测试坚果云</button>
+      </div>
+      <div id="status" class="status" role="status"></div>
+    </div>
+    <script src="shared/constants.js"></script>
+    <script src="shared/i18n.js"></script>
+    <script src="shared/messaging.js"></script>
+    <script src="options.js"></script>
+  </body>
+</html>
