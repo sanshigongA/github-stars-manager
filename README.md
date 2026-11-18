@@ -69,7 +69,7 @@ _locales/              中英文文案
 
 如果这个扩展帮到了你，欢迎扫码赞赏，支持后续维护与更新。
 
-![赞赏码](docs/appreciation-qr.jpg)
+<img src="docs/appreciation-qr.jpg" width="180" alt="赞赏码" />
 
 ## 许可
 
